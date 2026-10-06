@@ -123,6 +123,6 @@ This project is for **educational and portfolio purposes only**. The model outpu
 
 ### Author
 
-**Rishika Sinha**
+**Rishika**
 
 GitHub: `rishikasinha00-beep`
