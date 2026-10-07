@@ -125,4 +125,4 @@ This project is for **educational and portfolio purposes only**. The model outpu
 
 **Rishika**
 
-GitHub: `rishikasinha00-beep`
+GitHub: `rishika-2230`
