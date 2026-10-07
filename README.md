@@ -1,128 +1,326 @@
-# Breast Cancer Image Classification & Deployment
+# 🩺 OncoVision — Breast Cancer Detection Project
 
-An end-to-end deep-learning project for **breast cancer image classification**, with an interactive **Streamlit** application that allows a user to upload an image and receive a model prediction through a simple web interface.
+<p align="center">
+  <b>Deep Learning–Based Breast Cancer Image Classification with an Interactive Streamlit Application</b>
+</p>
 
-## 🎥 Application Demo
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python">
+  <img src="https://img.shields.io/badge/Deep%20Learning-CNN-orange">
+  <img src="https://img.shields.io/badge/Model-ResNet50-red">
+  <img src="https://img.shields.io/badge/Framework-TensorFlow%20%7C%20Keras-orange">
+  <img src="https://img.shields.io/badge/App-Streamlit-red?logo=streamlit">
+</p>
 
-The demo below shows the complete inference workflow — uploading an image, running it through the trained model, and displaying the prediction in Streamlit.
-
-![Breast Cancer Streamlit Demo](breast_cancer_streamlit_demo.gif)
-
-> **Portfolio highlight:** This repository demonstrates the complete workflow from image preprocessing and deep-learning inference to an interactive user-facing deployment.
+---
 
 ## 📌 Project Overview
 
-The objective of this project is to apply computer vision and deep learning to breast cancer image classification and make the trained model accessible through an easy-to-use web application.
+**OncoVision** is a deep-learning-based breast cancer image classification project designed to demonstrate an end-to-end machine learning workflow — from medical image preprocessing and model development to prediction and interactive application deployment.
 
-The application provides a practical inference pipeline:
+The project uses a **Convolutional Neural Network (CNN)** architecture with **ResNet50-based transfer learning** to learn visual patterns from breast cancer image data.
 
-1. A user uploads a breast image through the Streamlit interface.
-2. The uploaded image is prepared for model inference.
-3. The trained CNN-based model processes the image.
-4. The application displays the resulting prediction to the user.
+A **Streamlit web application** provides a simple interface where an image can be uploaded and processed by the trained model to generate a classification result.
 
-## 🧠 Machine Learning Pipeline
+> **Important:** OncoVision is an educational and portfolio project. It is not a medical diagnostic system and should not be used for clinical decision-making.
+
+---
+
+## 🎥 Application Demo
+
+<p align="center">
+  <img src="breast_cancer_streamlit_demo.gif" alt="OncoVision Streamlit Breast Cancer Detection Demo" width="850">
+</p>
+
+The application workflow is designed to be straightforward:
+
+**Upload Image → Image Preprocessing → CNN/ResNet50 Model → Prediction → Result Display**
+
+---
+
+## 🎯 Project Objective
+
+The objective of this project was to build an end-to-end computer vision pipeline capable of:
+
+- Processing breast cancer image data
+- Preparing images for deep-learning-based classification
+- Applying CNN-based feature learning
+- Using **ResNet50 transfer learning** for image classification
+- Generating predictions from unseen input images
+- Providing model results through an interactive **Streamlit interface**
+- Demonstrating how a trained machine-learning model can be converted into a usable application
+
+---
+
+## 🧠 Machine Learning Approach
+
+### Convolutional Neural Networks
+
+CNNs are particularly suitable for image classification because they can automatically learn spatial and visual features directly from image data.
+
+Rather than manually defining image characteristics, convolutional layers learn increasingly complex representations during training.
+
+### ResNet50
+
+The project incorporates **ResNet50**, a deep residual neural network architecture, as part of the image-classification pipeline.
+
+Transfer learning allows knowledge learned from a large-scale image dataset to be reused for a more specialized classification problem.
+
+This approach helps create a stronger feature extraction pipeline without requiring a deep neural network to be trained entirely from scratch.
+
+---
+
+## 🔄 End-to-End ML Pipeline
 
 ```text
-Breast Image
-     ↓
+Breast Cancer Image Dataset
+          │
+          ▼
+Data Loading & Inspection
+          │
+          ▼
+Image Preprocessing
+          │
+          ▼
+Training / Validation Preparation
+          │
+          ▼
+Data Augmentation
+          │
+          ▼
+CNN + ResNet50 Transfer Learning
+          │
+          ▼
+Model Training
+          │
+          ▼
+Model Evaluation
+          │
+          ▼
+Trained Classification Model
+          │
+          ▼
+Streamlit Application
+          │
+          ▼
 Image Upload
-     ↓
-Preprocessing
-     ↓
-Trained Deep-Learning Model
-     ↓
-Model Inference
-     ↓
-Prediction
-     ↓
-Streamlit Result Interface
+          │
+          ▼
+Preprocessing & Inference
+          │
+          ▼
+Prediction Result
 ```
 
-## ✨ Key Features
+---
 
-- Deep-learning-based image classification
-- CNN-based computer-vision pipeline
-- Automated image preprocessing for inference
-- Interactive image upload through Streamlit
-- Real-time model prediction through a web interface
-- End-to-end deployment-oriented project structure
-- Visual demonstration of the working application directly in this README
-
-## 🖥️ Streamlit Application
-
-The Streamlit interface converts the trained machine-learning model into an interactive application. Instead of running inference manually from a notebook or Python script, a user can upload an image and view the model output directly through the browser.
-
-This demonstrates not only model development, but also the ability to turn a machine-learning workflow into a usable application.
-
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 | Area | Technology |
 |---|---|
 | Programming | Python |
-| Deep Learning | CNN / Deep Learning |
-| Computer Vision | Image preprocessing and classification |
-| Web Application | Streamlit |
-| Data Handling | NumPy / Pandas |
-| Visualization | Matplotlib |
+| Deep Learning | CNN |
+| Transfer Learning | ResNet50 |
+| ML Framework | TensorFlow / Keras |
+| Data Processing | NumPy |
+| Image Processing | Python image-processing libraries |
+| Model Evaluation | Classification metrics |
+| Application | Streamlit |
 | Version Control | Git & GitHub |
+
+---
+
+## 🔬 Project Workflow
+
+### 1. Data Preparation
+
+The breast cancer image dataset was loaded and inspected before model development.
+
+The preparation stage focused on organizing the image data into a format suitable for the deep-learning pipeline.
+
+### 2. Image Preprocessing
+
+Images were transformed into a consistent format before being passed to the model.
+
+The preprocessing pipeline prepares raw image input for CNN-based feature extraction and prediction.
+
+### 3. Data Augmentation
+
+Image augmentation was incorporated into the training workflow to introduce variation into the training samples and improve the model's ability to generalize.
+
+### 4. CNN-Based Feature Learning
+
+Convolutional neural networks were used to learn relevant visual patterns from the image data.
+
+CNN layers identify increasingly complex visual representations as information moves deeper through the network.
+
+### 5. ResNet50 Transfer Learning
+
+A **ResNet50-based architecture** was used to leverage pretrained visual feature representations.
+
+Transfer learning enables the project to take advantage of previously learned image features while adapting the model to the breast cancer classification task.
+
+### 6. Model Training
+
+The prepared image data was used to train the classification model.
+
+Training involved learning the relationship between image features and their corresponding target classes.
+
+### 7. Model Evaluation
+
+The trained model was evaluated on data outside the training process to assess its classification behavior and generalization.
+
+### 8. Streamlit Deployment
+
+The trained machine-learning workflow was integrated into a **Streamlit application**, transforming the model from an experimental notebook/model into an interactive application.
+
+---
+
+## 💻 Streamlit Application
+
+The Streamlit interface provides a simple workflow for interacting with the trained model.
+
+### User Flow
+
+1. Open the OncoVision application.
+2. Upload a supported breast cancer image.
+3. The application preprocesses the image.
+4. The processed image is passed to the trained CNN/ResNet50 model.
+5. The model generates a classification prediction.
+6. The result is displayed through the Streamlit interface.
+
+This demonstrates the complete transition from:
+
+**Data → Model → Prediction → User-facing Application**
+
+---
 
 ## 🚀 Running the Project Locally
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/rishikasinha00-beep/Breast_cancer_project_deployment.git
+git clone https://github.com/rishika-2230/Breast_cancer_project_deployment.git
 cd Breast_cancer_project_deployment
 ```
 
-Create and activate a virtual environment, then install the dependencies used by the project.
+### 2. Create a Virtual Environment
 
-If the repository contains a `requirements.txt` file:
+```bash
+python -m venv venv
+```
+
+### 3. Activate the Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### macOS / Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Start the Streamlit application using the Streamlit entry-point file included in the repository, for example:
+### 5. Start the Streamlit Application
 
 ```bash
 streamlit run app.py
 ```
 
-> If your Streamlit entry-point has a different filename, replace `app.py` with that filename.
-
-## 📊 Model Evaluation
-
-Model performance should be interpreted using the evaluation metrics generated during training and testing. For medical-image classification, metrics such as **accuracy, precision, recall, F1-score, confusion matrix, and class-wise performance** are particularly useful when available.
-
-The application is intended as a **portfolio and educational machine-learning project**. It is not a medical diagnostic system and should not be used for clinical decision-making.
-
-## 📁 Repository Purpose
-
-This repository demonstrates an end-to-end applied machine-learning workflow covering:
-
-**Data → Image Processing → Deep Learning → Evaluation → Inference → Streamlit Deployment**
-
-It was developed as a portfolio project to demonstrate practical skills in computer vision, deep learning, Python application development, and ML deployment.
-
-## 🔮 Future Improvements
-
-- Add confidence/probability visualization to predictions
-- Expand model evaluation and comparison
-- Add explainability methods such as Grad-CAM
-- Improve deployment monitoring and error handling
-- Add automated testing and CI/CD
-- Improve the interface for mobile and smaller screens
-
-## ⚠️ Disclaimer
-
-This project is for **educational and portfolio purposes only**. The model output must not be interpreted as medical advice, diagnosis, or a replacement for evaluation by a qualified healthcare professional.
+> If the Streamlit entry file in your repository has a different name, replace `app.py` with the corresponding filename.
 
 ---
 
-### Author
+## 💡 Business & Practical Value
+
+Although this project is intended for educational and portfolio purposes, it demonstrates several skills that transfer directly to real-world analytics and machine-learning workflows:
+
+- Preparing unstructured image data for analysis
+- Developing deep-learning classification pipelines
+- Applying transfer learning
+- Evaluating machine-learning models
+- Connecting trained models with user-facing applications
+- Translating technical ML workflows into accessible tools
+- Deploying analytical solutions rather than limiting them to notebooks
+
+---
+
+## 📊 Skills Demonstrated
+
+**Machine Learning & AI**
+- Deep Learning
+- Convolutional Neural Networks
+- Transfer Learning
+- ResNet50
+- Image Classification
+- Model Training
+- Model Evaluation
+- Inference
+
+**Programming & Data**
+- Python
+- NumPy
+- Image preprocessing
+- Data preparation
+
+**Application Development**
+- Streamlit
+- Model integration
+- Interactive prediction workflow
+
+**Development**
+- Git
+- GitHub
+- Version control
+- Project documentation
+
+---
+
+## 🔮 Future Improvements
+
+Potential extensions to OncoVision include:
+
+- Experimenting with additional CNN architectures
+- Comparing ResNet50 against alternative transfer-learning models
+- Expanding model evaluation and explainability
+- Adding confidence/probability visualization
+- Adding Grad-CAM or similar visual explanation techniques
+- Improving the Streamlit user interface
+- Deploying the application through a persistent cloud environment
+- Adding automated model and application testing
+
+---
+
+## ⚠️ Medical Disclaimer
+
+**OncoVision is an educational machine-learning project and is not a medical device.**
+
+The predictions generated by this application must **not** be interpreted as medical diagnoses, treatment recommendations, or substitutes for professional medical evaluation.
+
+Breast cancer diagnosis should only be performed by qualified healthcare professionals using clinically validated diagnostic procedures.
+
+---
+
+## 👩‍💻 Author
 
 **Rishika**
 
-GitHub: `rishika-2230`
+Business/Data Analyst with a non-tech background and a tech-curious mindset, learning and building practical solutions using data, Python, SQL, machine learning and AI.
+
+**GitHub:** [rishika-2230](https://github.com/rishika-2230)
+
+---
+
+<p align="center">
+  <b>OncoVision</b><br>
+  Turning machine learning models into practical, interactive applications.
+</p>
